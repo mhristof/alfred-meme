@@ -61,8 +61,9 @@ func updateImage(img image.Image, text []string) {
 	m.SetHexColor("#000")
 	//lastx, lasty := 0.0, 0.0
 	m = drawText(m, text[0], float64(w/2), float64(strokeSize), float64(w)/2, float64(fontSize+strokeSize))
-
-	m = drawText(m, text[1], float64(w/2), float64(h-fontSize*2), float64(w)/2, float64(h)-fontSize)
+	if len(text) == 2 {
+		m = drawText(m, text[1], float64(w/2), float64(h-fontSize*2), float64(w)/2, float64(h)-fontSize)
+	}
 
 	m.SavePNG("meme.jpg")
 	fmt.Println("meme.jpg")
