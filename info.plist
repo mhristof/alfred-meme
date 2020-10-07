@@ -3,51 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>alfred-ocr</string>
-	<key>category</key>
-	<string>Productivity</string>
+	<string>alfred-meme</string>
 	<key>connections</key>
-	<dict>
-		<key>646499FA-1169-4D02-9708-C90AD6843E77</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C11CE89B-D388-47D5-8F9E-3F0EF31A0FF9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>EA9925B7-8BE0-4DF5-BA81-FF11A6C6F616</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>646499FA-1169-4D02-9708-C90AD6843E77</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>F46059A7-4255-4ABB-BC5C-5F000C3FC595</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>EA9925B7-8BE0-4DF5-BA81-FF11A6C6F616</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-	</dict>
+	<dict/>
 	<key>createdby</key>
 	<string>Mike Christof</string>
 	<key>description</key>
@@ -55,132 +13,69 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>ocr</string>
+	<string>meme</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>screencapture -i $FILE
-
-make $FILE.txt &amp;&gt; /dev/null
-
-rm $FILE</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>EA9925B7-8BE0-4DF5-BA81-FF11A6C6F616</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>C11CE89B-D388-47D5-8F9E-3F0EF31A0FF9</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>cat $FILE.txt
-rm -rf $FILE.txt &amp;&gt; /dev/null</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
 				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>646499FA-1169-4D02-9708-C90AD6843E77</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
 				<key>keyword</key>
-				<string>ocr</string>
+				<string>meme</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./alfred-meme.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
-				<key>text</key>
-				<string>Captures a screenshot and converts it to text</string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>F46059A7-4255-4ABB-BC5C-5F000C3FC595</string>
+			<string>9A4E0276-BFF2-4386-9699-AB65E494C7B8</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>646499FA-1169-4D02-9708-C90AD6843E77</key>
+		<key>9A4E0276-BFF2-4386-9699-AB65E494C7B8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>465</integer>
+			<integer>105</integer>
 			<key>ypos</key>
-			<integer>145</integer>
-		</dict>
-		<key>C11CE89B-D388-47D5-8F9E-3F0EF31A0FF9</key>
-		<dict>
-			<key>xpos</key>
-			<integer>655</integer>
-			<key>ypos</key>
-			<integer>145</integer>
-		</dict>
-		<key>EA9925B7-8BE0-4DF5-BA81-FF11A6C6F616</key>
-		<dict>
-			<key>xpos</key>
-			<integer>270</integer>
-			<key>ypos</key>
-			<integer>145</integer>
-		</dict>
-		<key>F46059A7-4255-4ABB-BC5C-5F000C3FC595</key>
-		<dict>
-			<key>xpos</key>
 			<integer>80</integer>
-			<key>ypos</key>
-			<integer>145</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -193,8 +88,8 @@ rm -rf $FILE.txt &amp;&gt; /dev/null</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.4</string>
+	<string>0.1.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/mhristof/alfred-ocr/tree/master</string>
+	<string>https://github.com/mhristof/alfred-meme/tree/master</string>
 </dict>
 </plist>
