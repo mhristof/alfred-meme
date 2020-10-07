@@ -101,7 +101,7 @@
 	<key>createdby</key>
 	<string>Mike Christof</string>
 	<key>description</key>
-    <string>Alfred workflow to generate memes and copy them to clipboard</string>
+	<string>Alfred workflow to generate memes and copy them to clipboard</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
