@@ -10,7 +10,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>022C7B11-30B9-45DF-AA7F-F2399C1BE9F8</string>
+				<string>B654BF28-5003-4421-93E9-28B6BE598619</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -37,6 +37,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>59520B3E-2A74-453D-BDF6-7A887F537799</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B654BF28-5003-4421-93E9-28B6BE598619</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>249B0192-A163-46F9-A1A4-F8680F1415CF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -225,6 +238,31 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>#!/usr/bin/env bash
+
+osascript -e 'set the clipboard to (read (POSIX file "{query}") as JPEG picture)'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>249B0192-A163-46F9-A1A4-F8680F1415CF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
 				<string>./bin/alfred-meme generate $image $text</string>
@@ -245,17 +283,13 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  set the clipboard to POSIX file q
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
+			<string>alfred.workflow.utility.transform</string>
 			<key>uid</key>
-			<string>022C7B11-30B9-45DF-AA7F-F2399C1BE9F8</string>
+			<string>B654BF28-5003-4421-93E9-28B6BE598619</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -264,17 +298,17 @@ end alfred_script</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>022C7B11-30B9-45DF-AA7F-F2399C1BE9F8</key>
-		<dict>
-			<key>xpos</key>
-			<integer>520</integer>
-			<key>ypos</key>
-			<integer>285</integer>
-		</dict>
 		<key>21D1782C-378B-4E9C-9818-091C8A8CA92B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>340</integer>
+			<integer>235</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+		<key>249B0192-A163-46F9-A1A4-F8680F1415CF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>600</integer>
 			<key>ypos</key>
 			<integer>285</integer>
 		</dict>
@@ -291,6 +325,13 @@ end alfred_script</string>
 			<integer>10</integer>
 			<key>ypos</key>
 			<integer>130</integer>
+		</dict>
+		<key>B654BF28-5003-4421-93E9-28B6BE598619</key>
+		<dict>
+			<key>xpos</key>
+			<integer>495</integer>
+			<key>ypos</key>
+			<integer>315</integer>
 		</dict>
 		<key>DB1C702C-1FB1-453F-8DE3-9BED7AB2ED94</key>
 		<dict>
