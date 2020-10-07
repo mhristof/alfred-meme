@@ -19,6 +19,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>249B0192-A163-46F9-A1A4-F8680F1415CF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0592109D-E890-48B0-9E64-6DFFB095F30A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>59520B3E-2A74-453D-BDF6-7A887F537799</key>
 		<array>
 			<dict>
@@ -62,16 +75,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>DB1C702C-1FB1-453F-8DE3-9BED7AB2ED94</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>21D1782C-378B-4E9C-9818-091C8A8CA92B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -105,23 +108,6 @@
 	<string>meme</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>DB1C702C-1FB1-453F-8DE3-9BED7AB2ED94</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -238,6 +224,29 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./bin/alfred-meme generate $image $text</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>21D1782C-378B-4E9C-9818-091C8A8CA92B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
 				<string>#!/usr/bin/env bash
@@ -260,25 +269,23 @@ osascript -e 'set the clipboard to (read (POSIX file "{query}") as JPEG picture)
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>./bin/alfred-meme generate $image $text</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:text}</string>
+				<key>title</key>
+				<string>Meme ready</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>21D1782C-378B-4E9C-9818-091C8A8CA92B</string>
+			<string>0592109D-E890-48B0-9E64-6DFFB095F30A</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -298,19 +305,26 @@ osascript -e 'set the clipboard to (read (POSIX file "{query}") as JPEG picture)
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0592109D-E890-48B0-9E64-6DFFB095F30A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>550</integer>
+			<key>ypos</key>
+			<integer>295</integer>
+		</dict>
 		<key>21D1782C-378B-4E9C-9818-091C8A8CA92B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>235</integer>
+			<integer>50</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>295</integer>
 		</dict>
 		<key>249B0192-A163-46F9-A1A4-F8680F1415CF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>600</integer>
+			<integer>345</integer>
 			<key>ypos</key>
-			<integer>285</integer>
+			<integer>295</integer>
 		</dict>
 		<key>59520B3E-2A74-453D-BDF6-7A887F537799</key>
 		<dict>
@@ -329,16 +343,9 @@ osascript -e 'set the clipboard to (read (POSIX file "{query}") as JPEG picture)
 		<key>B654BF28-5003-4421-93E9-28B6BE598619</key>
 		<dict>
 			<key>xpos</key>
-			<integer>495</integer>
+			<integer>225</integer>
 			<key>ypos</key>
-			<integer>315</integer>
-		</dict>
-		<key>DB1C702C-1FB1-453F-8DE3-9BED7AB2ED94</key>
-		<dict>
-			<key>xpos</key>
-			<integer>595</integer>
-			<key>ypos</key>
-			<integer>70</integer>
+			<integer>325</integer>
 		</dict>
 		<key>EA2A023E-D4B2-48C4-8D56-FD67E39897BB</key>
 		<dict>
