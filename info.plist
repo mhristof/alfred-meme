@@ -101,7 +101,7 @@
 	<key>createdby</key>
 	<string>Mike Christof</string>
 	<key>description</key>
-	<string>Captures a screenshot and copys the recognized text to the clipboard</string>
+    <string>Alfred workflow to generate memes and copy them to clipboard</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -163,11 +163,11 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>teset</string>
+				<string>0cd829b2-77b0-4243-aff5-f4e1dec00137</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string></string>
+				<string>Meme text, multiple lines separated with |</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -224,29 +224,6 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>./bin/alfred-meme generate $image $text</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>21D1782C-378B-4E9C-9818-091C8A8CA92B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
 				<string>#!/usr/bin/env bash
@@ -263,6 +240,29 @@ osascript -e 'set the clipboard to (read (POSIX file "{query}") as JPEG picture)
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>249B0192-A163-46F9-A1A4-F8680F1415CF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./bin/alfred-meme generate $image $text</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>21D1782C-378B-4E9C-9818-091C8A8CA92B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
