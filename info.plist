@@ -6,6 +6,19 @@
 	<string>alfred-meme</string>
 	<key>connections</key>
 	<dict>
+		<key>21D1782C-378B-4E9C-9818-091C8A8CA92B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>022C7B11-30B9-45DF-AA7F-F2399C1BE9F8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>59520B3E-2A74-453D-BDF6-7A887F537799</key>
 		<array>
 			<dict>
@@ -36,7 +49,17 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>ED2530EC-2EAA-4B1F-819B-A55399DEF222</string>
+				<string>DB1C702C-1FB1-453F-8DE3-9BED7AB2ED94</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>21D1782C-378B-4E9C-9818-091C8A8CA92B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -69,6 +92,23 @@
 	<string>meme</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>DB1C702C-1FB1-453F-8DE3-9BED7AB2ED94</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -142,27 +182,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>text: {var:text} image {var:image}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>ED2530EC-2EAA-4B1F-819B-A55399DEF222</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -190,7 +209,7 @@
 				<key>variables</key>
 				<dict>
 					<key>text</key>
-					<string>{query}</string>
+					<string>--text "{query}"</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -200,11 +219,65 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./bin/alfred-meme generate $image $text</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>21D1782C-378B-4E9C-9818-091C8A8CA92B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  set the clipboard to POSIX file q
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>022C7B11-30B9-45DF-AA7F-F2399C1BE9F8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>022C7B11-30B9-45DF-AA7F-F2399C1BE9F8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>520</integer>
+			<key>ypos</key>
+			<integer>285</integer>
+		</dict>
+		<key>21D1782C-378B-4E9C-9818-091C8A8CA92B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>285</integer>
+		</dict>
 		<key>59520B3E-2A74-453D-BDF6-7A887F537799</key>
 		<dict>
 			<key>xpos</key>
@@ -219,19 +292,19 @@
 			<key>ypos</key>
 			<integer>130</integer>
 		</dict>
+		<key>DB1C702C-1FB1-453F-8DE3-9BED7AB2ED94</key>
+		<dict>
+			<key>xpos</key>
+			<integer>595</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
 		<key>EA2A023E-D4B2-48C4-8D56-FD67E39897BB</key>
 		<dict>
 			<key>xpos</key>
 			<integer>465</integer>
 			<key>ypos</key>
 			<integer>160</integer>
-		</dict>
-		<key>ED2530EC-2EAA-4B1F-819B-A55399DEF222</key>
-		<dict>
-			<key>xpos</key>
-			<integer>600</integer>
-			<key>ypos</key>
-			<integer>130</integer>
 		</dict>
 		<key>EDFBCE9A-7A0E-423E-A1B7-EFEEB707FD9F</key>
 		<dict>
