@@ -11,7 +11,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const fontSize = 36
+var fontSize = 36.0
+
 const strokeSize = 6
 
 var (
@@ -36,6 +37,9 @@ var (
 
 			lines := strings.Split(strings.TrimSuffix(strings.TrimPrefix(text, `"`), `"`), "|")
 
+			fontSize = scaleFont(lines)
+			fmt.Println(fmt.Sprintf("fontSize: %+v", fontSize))
+
 			meme, _, err := image.Decode(f)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Error, cannot load image %s [%s]", file, err)
@@ -47,6 +51,24 @@ var (
 		},
 	}
 )
+
+func scaleFont(lines []string) float64 {
+	var maxLen int
+
+	for _, line := range lines {
+		thisLen := len(line)
+		if thisLen > maxLen {
+			maxLen = thisLen
+		}
+	}
+
+	switch {
+	case maxLen >= 23:
+		return 23.0
+	default:
+		return fontSize
+	}
+}
 
 func updateImage(img image.Image, text []string) {
 	r := img.Bounds()
@@ -62,7 +84,7 @@ func updateImage(img image.Image, text []string) {
 	//lastx, lasty := 0.0, 0.0
 	m = drawText(m, text[0], float64(w/2), float64(strokeSize), float64(w)/2, float64(fontSize+strokeSize))
 	if len(text) == 2 {
-		m = drawText(m, text[1], float64(w/2), float64(h-fontSize*2), float64(w)/2, float64(h)-fontSize)
+		m = drawText(m, text[1], float64(w/2), float64(h-int(fontSize)*2), float64(w)/2, float64(h)-fontSize)
 	}
 
 	m.SavePNG("meme.jpg")
@@ -78,7 +100,7 @@ func drawText(m *gg.Context, text string, startX, startY, anchoredX, anchoredY f
 				continue
 			}
 			x := startX + float64(dx)
-			y := startY + float64(fontSize+dy)
+			y := startY + float64(int(fontSize)+dy)
 			m.DrawStringAnchored(text, x, y, 0.5, 0.5)
 		}
 	}
