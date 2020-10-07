@@ -6,30 +6,12 @@ SHELL := bash
 
 
 IMAGE := alfred-meme
-build: .build
-.PHONY: build
 
-
-%.txt: .build
-	docker run -v "$(PWD):/work" -w /work --rm $(IMAGE) tesseract '$(basename $@)' '$(basename $@)'
-
-zip: info.plist  Dockerfile Makefile
+zip: info.plist Makefile
 	zip -r $(IMAGE).alfredworkflow $^
 
-.build: 
-	docker build -t $(IMAGE) .
-	touch .build
-
-bash: .build
-	docker run --rm -it $(IMAGE) /bin/bash
-.PHONY: bash
-
-run: .build
-	docker run --rm -it $(IMAGE)
-.PHONY: run
-
 clean:
-	rm -rf .build
+	rm -rf $(IMAGE).alfredworkflow
 .PHONY: clean
 
 .PHONY: minor
