@@ -364,8 +364,6 @@ osascript -e 'set the clipboard to (read (POSIX file "{query}") as JPEG picture)
 	</dict>
 	<key>variables</key>
 	<dict>
-		<key>FILE</key>
-		<string>screenshot</string>
 		<key>PATH</key>
 		<string>/usr/bin:/usr/sbin:/usr/local/bin:/bin</string>
 	</dict>
@@ -374,6 +372,6 @@ osascript -e 'set the clipboard to (read (POSIX file "{query}") as JPEG picture)
 	<key>version</key>
 	<string>0.1.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/mhristof/alfred-meme/tree/master</string>
+	<string>https://github.com/mhristof/alfred-meme</string>
 </dict>
 </plist>
