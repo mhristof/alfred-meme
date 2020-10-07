@@ -38,7 +38,6 @@ var (
 			lines := strings.Split(strings.TrimSuffix(strings.TrimPrefix(text, `"`), `"`), "|")
 
 			fontSize = scaleFont(lines)
-			fmt.Println(fmt.Sprintf("fontSize: %+v", fontSize))
 
 			meme, _, err := image.Decode(f)
 			if err != nil {
