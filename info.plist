@@ -370,7 +370,7 @@ osascript -e 'set the clipboard to (read (POSIX file "{query}") as JPEG picture)
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.2.0</string>
+	<string>0.2.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/mhristof/alfred-meme</string>
 </dict>
