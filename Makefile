@@ -7,7 +7,11 @@ SHELL := bash
 
 IMAGE := alfred-meme
 
-zip: info.plist Makefile
+bin/alfred-meme: $(shell find ./ -name '*.go')
+	go build -o bin/alfred-meme main.go
+
+
+zip: info.plist Makefile alfred-meme.sh bin/alfred-meme
 	zip -r $(IMAGE).alfredworkflow $^
 
 clean:
