@@ -55,7 +55,7 @@ func updateImage(img image.Image, text []string) {
 
 	m := gg.NewContext(w, h)
 	m.DrawImage(img, 0, 0)
-	m.LoadFontFace("/Library/Fonts/Impact.ttf", fontSize)
+	m.LoadFontFace("/System/Library/Fonts/Supplemental/Comic Sans MS.ttf", fontSize)
 
 	// Apply black stroke
 	m.SetHexColor("#000")
