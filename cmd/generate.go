@@ -34,7 +34,7 @@ var (
 				panic(err)
 			}
 
-			lines := strings.Split(text, "|")
+			lines := strings.Split(strings.TrimSuffix(strings.TrimPrefix(text, `"`), `"`), "|")
 
 			meme, _, err := image.Decode(f)
 			if err != nil {
