@@ -11,7 +11,7 @@ bin/alfred-meme: $(shell find ./ -name '*.go')
 	go build -o bin/alfred-meme main.go
 
 
-zip: info.plist Makefile alfred-meme.sh bin/alfred-meme
+zip: info.plist Makefile alfred-meme.sh bin/alfred-meme memes/
 	zip -r $(IMAGE).alfredworkflow $^
 
 clean:

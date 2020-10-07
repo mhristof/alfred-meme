@@ -5,7 +5,60 @@
 	<key>bundleid</key>
 	<string>alfred-meme</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>59520B3E-2A74-453D-BDF6-7A887F537799</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EDFBCE9A-7A0E-423E-A1B7-EFEEB707FD9F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9A4E0276-BFF2-4386-9699-AB65E494C7B8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>59520B3E-2A74-453D-BDF6-7A887F537799</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EA2A023E-D4B2-48C4-8D56-FD67E39897BB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ED2530EC-2EAA-4B1F-819B-A55399DEF222</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EDFBCE9A-7A0E-423E-A1B7-EFEEB707FD9F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA2A023E-D4B2-48C4-8D56-FD67E39897BB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>Mike Christof</string>
 	<key>description</key>
@@ -44,7 +97,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./alfred-meme.sh</string>
+				<string>./alfred-meme.sh alfred</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -65,17 +118,127 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>teset</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string></string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>EDFBCE9A-7A0E-423E-A1B7-EFEEB707FD9F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>text: {var:text} image {var:image}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>ED2530EC-2EAA-4B1F-819B-A55399DEF222</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>image</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>59520B3E-2A74-453D-BDF6-7A887F537799</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>text</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>EA2A023E-D4B2-48C4-8D56-FD67E39897BB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>59520B3E-2A74-453D-BDF6-7A887F537799</key>
+		<dict>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
 		<key>9A4E0276-BFF2-4386-9699-AB65E494C7B8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>130</integer>
+		</dict>
+		<key>EA2A023E-D4B2-48C4-8D56-FD67E39897BB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>465</integer>
+			<key>ypos</key>
+			<integer>160</integer>
+		</dict>
+		<key>ED2530EC-2EAA-4B1F-819B-A55399DEF222</key>
+		<dict>
+			<key>xpos</key>
+			<integer>600</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>EDFBCE9A-7A0E-423E-A1B7-EFEEB707FD9F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>275</integer>
+			<key>ypos</key>
+			<integer>130</integer>
 		</dict>
 	</dict>
 	<key>variables</key>

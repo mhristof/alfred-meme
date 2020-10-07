@@ -24,7 +24,8 @@ var (
 			for _, file := range files {
 				path := filepath.Join(dir, file.Name())
 
-				_ = opts.Add(path, path)
+				item := opts.Add(path, path)
+				item.SetMatch(strings.ReplaceAll(file.Name(), "-", " "))
 
 			}
 			opts.Print()
