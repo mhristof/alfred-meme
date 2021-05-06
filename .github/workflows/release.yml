@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
-        - run: make build
         - run: make zip
         - name: Create Release
           id: create_release
