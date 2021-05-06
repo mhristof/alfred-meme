@@ -8,14 +8,14 @@ SHELL := bash
 IMAGE := alfred-meme
 
 bin/alfred-meme: $(shell find ./ -name '*.go')
-	go build -o bin/alfred-meme main.go
-
+	GOOS=darwin go build -o bin/alfred-meme main.go
 
 zip: info.plist Makefile alfred-meme.sh bin/alfred-meme memes/ icon.png
 	zip -r $(IMAGE).alfredworkflow $^
 
 clean:
 	rm -rf $(IMAGE).alfredworkflow
+	rm -rf bin
 .PHONY: clean
 
 .PHONY: minor
